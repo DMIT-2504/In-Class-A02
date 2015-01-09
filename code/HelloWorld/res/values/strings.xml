@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, HelloWorldActivity!</string>
+    <string name="app_name">FirstOne</string>
+    <string name="first_one_title">This is my first android app</string>
+    <color name="title_text_color">#900</color>
+    <string name="edit_text_hint">Enter your data here</string>
+    <string name="enter_data_button">Click Me</string>
+
+</resources>
