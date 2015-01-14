@@ -5,11 +5,11 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class ReceiveDataActivity extends Activity {
-	
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.receive_data);
+    
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.receive_data);
         
         Bundle bundle = getIntent().getExtras();
         String prefix = bundle.getString("PREFIX");
@@ -20,6 +20,6 @@ public class ReceiveDataActivity extends Activity {
  
         TextView textbox = (TextView)findViewById(R.id.textbox_receive_data);
         textbox.setText(data);
-	}
-	
+    }
+    
 }
