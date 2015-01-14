@@ -6,7 +6,7 @@
     <string name="first_one_title">My second android app</string>
     <color name="title_text_color">#9A9</color>
     <string name="edit_text_hint">Enter your data here</string>
-    <string name="enter_data_button">Click Me</string>
-
+    <string name="show_toast">Show as Toast</string>
+    <string name="send_data">Show in Other Activity</string>
 
 </resources>
