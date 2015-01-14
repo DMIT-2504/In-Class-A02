@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello Data Sharing!</string>
+    <string name="app_name">SecondOne</string>
+    <string name="first_one_title">My second android app</string>
+    <color name="title_text_color">#9A9</color>
+    <string name="edit_text_hint">Enter your data here</string>
+    <string name="enter_data_button">Click Me</string>
+
+
+</resources>

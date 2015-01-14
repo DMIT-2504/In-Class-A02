@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView android:layout_height="wrap_content"
+              android:layout_width="wrap_content" 
+              android:layout_gravity="center_horizontal" 
+              android:textColor="@color/title_text_color" 
+              android:textSize="25dp" 
+              android:text="@string/first_one_title"></TextView>
+        
+    <EditText android:background="#CCFFFFFF" 
+              android:layout_height="fill_parent" 
+              android:layout_width="fill_parent" 
+              android:hint="@string/edit_text_hint" 
+              android:layout_marginRight="5sp" 
+              android:layout_marginLeft="5sp" 
+              android:layout_marginTop="5sp" 
+              android:layout_weight="1" 
+              android:id="@+id/text_view_data"></EditText>
+	        	    
+    <Button android:layout_height="wrap_content" 
+            android:layout_width="fill_parent" 
+            android:textSize="15sp" 
+            android:text="@string/enter_data_button" 
+            android:layout_marginRight="5dp" 
+            android:layout_marginLeft="5dp" 
+            android:layout_marginTop="5dp" 
+            android:layout_marginBottom="5dp" 
+            android:id="@+id/button_send_data"></Button>
+
+
+</LinearLayout>
