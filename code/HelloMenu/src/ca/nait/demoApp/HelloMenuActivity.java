@@ -20,9 +20,9 @@ public class HelloMenuActivity extends Activity {
 	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.demo_menu, menu);
-		return true;
+    MenuInflater inflater = getMenuInflater();
+    inflater.inflate(R.menu.demo_menu, menu);
+    return true;
 	}
 
 	/* (non-Javadoc)
@@ -30,36 +30,36 @@ public class HelloMenuActivity extends Activity {
 	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		String message;
-		switch(item.getItemId()) {
-			case R.id.first_menu_item: {
-				message = "We're sorry, that number is out of service.";
-				break;
-			}
-			case R.id.second_menu_item: {
-				message = "I can add: 2 + 2 = 4";
-				break;
-			}
-			case R.id.third_menu_item: {
-				message = "Write on!";
-				break;
-			}
-			case R.id.fourth_menu_item: {
-				message = "Try that again...";
-				break;
-			}
-			case R.id.last_menu_item: {
-				message = "Goodnight.";
-				break;
-			}
-			default: {
-				message = "Unsupported menu option";
-				break;
-			}
-		}
-		Say(message);
-		
-		return true;
+    String message;
+    switch(item.getItemId()) {
+    	case R.id.first_menu_item: {
+        message = "We're sorry, that number is out of service.";
+        break;
+    	}
+    	case R.id.second_menu_item: {
+        message = "I can add: 2 + 2 = 4";
+        break;
+    	}
+    	case R.id.third_menu_item: {
+        message = "Write on!";
+        break;
+    	}
+    	case R.id.fourth_menu_item: {
+        message = "Try that again...";
+        break;
+    	}
+    	case R.id.last_menu_item: {
+        message = "Goodnight.";
+        break;
+    	}
+    	default: {
+        message = "Unsupported menu option";
+        break;
+    	}
+    }
+    Say(message);
+    
+    return true;
 	}
     
     private void Say(String text) {

@@ -14,7 +14,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class HelloListViewActivity extends Activity
-								   implements OnClickListener {
+                   implements OnClickListener {
 	private List<String> _todoItems = new ArrayList<String>();
 	private Button _addButton;
 	private EditText _userInput;
@@ -37,14 +37,14 @@ public class HelloListViewActivity extends Activity
     }
 
 	public void onClick(View arg0) {
-		String item = _userInput.getText().toString();
-		
-		if(Str.isNotEmptyString(item)) {
-			_todoItems.add(item);
-			_todoListView.setAdapter(_adapter);
-			_userInput.setText("");
-		} else {
-			Toast.makeText(this, "Please enter some text before clicking the button.", Toast.LENGTH_LONG).show();
-		}
+    String item = _userInput.getText().toString();
+    
+    if(Str.isNotEmptyString(item)) {
+    	_todoItems.add(item);
+    	_todoListView.setAdapter(_adapter);
+    	_userInput.setText("");
+    } else {
+    	Toast.makeText(this, "Please enter some text before clicking the button.", Toast.LENGTH_LONG).show();
+    }
 	}
 }

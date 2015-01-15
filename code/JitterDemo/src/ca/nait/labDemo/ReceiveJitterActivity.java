@@ -31,30 +31,30 @@ public class ReceiveJitterActivity extends Activity {
     }
 	private void getFromJitter() 
 	{
-		BufferedReader in = null;
-		TextView textbox = (TextView)findViewById(R.id.textbox_receive_data);
-		try
-		{
-			HttpClient client = new DefaultHttpClient();
-			HttpGet request = new HttpGet();
-			request.setURI(new URI("http://www.youcode.ca/JitterServlet"));
-			HttpResponse response = client.execute(request);
-			in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
-			StringBuffer sb = new StringBuffer("");
-			String line = "";
-			String NL = System.getProperty("line.separator");
-			
-			while((line = in.readLine()) != null)
-			{
-				sb.append(line + NL);
-				System.out.println(line);
-				textbox.append(line + "\n");
-			}
-			in.close();
-		}
-		catch(Exception e)
-		{
-			Toast.makeText(this, "Error: " + e, Toast.LENGTH_LONG).show();
-		}
+    BufferedReader in = null;
+    TextView textbox = (TextView)findViewById(R.id.textbox_receive_data);
+    try
+    {
+    	HttpClient client = new DefaultHttpClient();
+    	HttpGet request = new HttpGet();
+    	request.setURI(new URI("http://www.youcode.ca/JitterServlet"));
+    	HttpResponse response = client.execute(request);
+    	in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+    	StringBuffer sb = new StringBuffer("");
+    	String line = "";
+    	String NL = System.getProperty("line.separator");
+    	
+    	while((line = in.readLine()) != null)
+    	{
+        sb.append(line + NL);
+        System.out.println(line);
+        textbox.append(line + "\n");
+    	}
+    	in.close();
+    }
+    catch(Exception e)
+    {
+    	Toast.makeText(this, "Error: " + e, Toast.LENGTH_LONG).show();
+    }
 	}
 }
