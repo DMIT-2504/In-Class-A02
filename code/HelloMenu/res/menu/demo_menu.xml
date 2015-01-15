@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/first_menu_item" 
+          android:titleCondensed="@string/menu_first_condensed" 
+          android:title="@string/menu_first"
+          android:icon="@android:drawable/ic_menu_call"></item>
+    
+    <item android:id="@+id/second_menu_item" 
+          android:titleCondensed="@string/menu_second_condensed" 
+          android:title="@string/menu_second"
+          android:icon="@android:drawable/ic_menu_add"></item>
+    
+    <item android:id="@+id/third_menu_item" 
+          android:titleCondensed="@string/menu_third_condensed" 
+          android:title="@string/menu_three"
+          android:icon="@android:drawable/ic_menu_edit"></item>
+    
+    <item android:id="@+id/fourth_menu_item" 
+          android:titleCondensed="@string/menu_fourth_condensed" 
+          android:title="@string/menu_four"
+          android:icon="@android:drawable/ic_menu_rotate"></item>
+    
+    <item android:id="@+id/last_menu_item" 
+          android:titleCondensed="@string/menu_last_condensed" 
+          android:title="@string/menu_last"
+          android:icon="@android:drawable/ic_menu_view"></item>
+
+</menu>
