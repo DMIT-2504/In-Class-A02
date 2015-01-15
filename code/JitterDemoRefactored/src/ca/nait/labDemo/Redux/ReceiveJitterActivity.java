@@ -3,14 +3,7 @@
  */
 package ca.nait.labDemo.Redux;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.URI;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
+import java.util.List;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -29,26 +22,16 @@ public class ReceiveJitterActivity extends Activity {
 
     }
 
+    private String NL = System.getProperty("line.separator");
+
     private void getFromJitter() {
-        BufferedReader in = null;
         TextView textbox = (TextView) findViewById(R.id.textbox_receive_data);
         try {
-            HttpClient client = new DefaultHttpClient();
-            HttpGet request = new HttpGet();
-            request.setURI(new URI("http://www.youcode.ca/JitterServlet"));
-            HttpResponse response = client.execute(request);
-            in = new BufferedReader(new InputStreamReader(response.getEntity()
-                    .getContent()));
-            StringBuffer sb = new StringBuffer("");
-            String line = "";
-            String NL = System.getProperty("line.separator");
+            JitterClient jc = new JitterClient();
+            List<String> jitters = jc.getJitters();
+            for (String posting : jitters)
+                textbox.append(posting + NL);
 
-            while ((line = in.readLine()) != null) {
-                sb.append(line + NL);
-                System.out.println(line);
-                textbox.append(line + "\n");
-            }
-            in.close();
         } catch (Exception e) {
             Toast.makeText(this, "Error: " + e, Toast.LENGTH_LONG).show();
         }

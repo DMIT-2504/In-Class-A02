@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
+import org.apache.http.StatusLine;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
@@ -24,6 +25,7 @@ import android.widget.Toast;
 public class JitterDemoActivity extends Activity
         implements OnClickListener {
     private static final String TAG = "SendDataActivity";
+    private EditText _jitterEditText;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +35,8 @@ public class JitterDemoActivity extends Activity
         sendButton.setOnClickListener(this);
         Button viewButton = (Button) findViewById(R.id.button_view_jitters);
         viewButton.setOnClickListener(this);
+
+        _jitterEditText = (EditText) findViewById(R.id.textbox_data);
     }
 
     public void onClick(View view) {
@@ -40,11 +44,9 @@ public class JitterDemoActivity extends Activity
 
         switch (view.getId()) {
         case R.id.button_send_data: {
-            EditText text = (EditText) findViewById(R.id.textbox_data);
-            String data = text.getText().toString();
-            if (!postToJitter(data))
+            if (!postToJitter())
                 return;
-            text.setText("");
+            _jitterEditText.setText("");
             break;
         }
         }
@@ -52,18 +54,17 @@ public class JitterDemoActivity extends Activity
         this.startActivity(intent);
     }
 
-    private boolean postToJitter(String string) {
+    private boolean postToJitter() {
+        String data = _jitterEditText.getText().toString();
         try {
-            HttpClient client = new DefaultHttpClient();
-            HttpPost request = new HttpPost(
-                    "http://www.youcode.ca/JitterServlet");
-            List<NameValuePair> postParameters = new ArrayList<NameValuePair>();
-            postParameters.add(new BasicNameValuePair("DATA", string));
-            postParameters.add(new BasicNameValuePair("LOGIN_NAME", "DanG"));
-            UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(
-                    postParameters);
-            request.setEntity(formEntity);
-            HttpResponse response = client.execute(request);
+            JitterClient jc = new JitterClient();
+            StatusLine result = jc.postToJitter(data);
+            if (result.getStatusCode() != 200) {
+                Toast.makeText(this,
+                        "Error Posting to Jitter: " + result.getReasonPhrase(),
+                        Toast.LENGTH_LONG);
+                return false;
+            }
             return true;
         } catch (Exception e) {
             Toast.makeText(this, "Error: " + e, Toast.LENGTH_LONG).show();
