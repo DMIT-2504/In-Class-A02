@@ -22,10 +22,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class JitterDemoActivity extends Activity 
-                implements OnClickListener {
-	private static final String TAG = "SendDataActivity";
+                                implements OnClickListener {
+    private static final String TAG = "SendDataActivity";
     
-	public void onCreate(Bundle savedInstanceState) 
+    public void onCreate(Bundle savedInstanceState) 
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
@@ -35,32 +35,32 @@ public class JitterDemoActivity extends Activity
         Button viewButton = (Button)findViewById(R.id.button_view_jitters);
         viewButton.setOnClickListener(this);
     }
-	
-	public void onClick(View view) 
-	{
+    
+    public void onClick(View view) 
+    {
         Log.d(TAG,"button clicked");
 
         switch(view.getId())
     {
-    	case R.id.button_send_data:
-    	{
+        case R.id.button_send_data:
+        {
         EditText text = (EditText)findViewById(R.id.textbox_data);
         String data = text.getText().toString();
         if(!postToJitter(data))
-        	return;
+            return;
         text.setText("");
         break;
-    	}
+        }
     }
     Intent intent = new Intent(this,ReceiveJitterActivity.class);
     this.startActivity(intent);
-	}
-	
-	private boolean postToJitter(String string) 
-	{
+    }
+    
+    private boolean postToJitter(String string) 
+    {
     try
     {
-    	HttpClient client = new DefaultHttpClient();
+        HttpClient client = new DefaultHttpClient();
             HttpPost request = new HttpPost("http://www.youcode.ca/JitterServlet");
             List <NameValuePair> postParameters = new ArrayList<NameValuePair>();
             postParameters.add(new BasicNameValuePair("DATA", string));
@@ -72,11 +72,11 @@ public class JitterDemoActivity extends Activity
     }
     catch(Exception e)
     {
-    	Toast.makeText(this, "Error: " + e, Toast.LENGTH_LONG).show();
-    	EditText text = (EditText)findViewById(R.id.textbox_data);
-    	text.setText(e.getMessage());
+        Toast.makeText(this, "Error: " + e, Toast.LENGTH_LONG).show();
+        EditText text = (EditText)findViewById(R.id.textbox_data);
+        text.setText(e.getMessage());
 
-    	return false;
+        return false;
+        }
     }
-	}
 }
