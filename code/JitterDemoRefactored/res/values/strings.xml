@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">JitterDemo</string>
+    <string name="hello">Hello Jitter Demo!</string>
+    
+    <string name="send_data_title">Send Data Activity</string>
+    <color name="send_data_title_color">#F0F</color>
+    <string name="send_data_hint">Text to send to Jitter</string>
+    <string name="send_data_button_text">Send to Jitter</string>
+    <string name="start_receive_jitters">View Jitters</string>
+    
+    <string name="receive_data_title">Receive Data Activity</string>
+    <color name="receive_data_title_color">#FF0</color>
+
+</resources>

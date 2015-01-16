@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HelloListView</string>
+    <string name="hello">To-Do List</string>
+    <string name="edit_text_hint">Enter TODO Item</string>
+    <string name="button_text">Add Item to List</string>
+
+</resources>

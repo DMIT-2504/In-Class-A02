@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HelloMenu</string>
+    <string name="hello">Hello World, HelloMenuActivity!</string>
+    
+    <string name="menu_first">First Menu Item</string>
+    <string name="menu_first_condensed">First</string>
+    
+    <string name="menu_second">Second Menu Item</string>
+    <string name="menu_second_condensed">2nd</string>
+    
+    <string name="menu_three">Third Menu Item</string>
+    <string name="menu_third_condensed">Third</string>
+    
+    <string name="menu_four">Fourth Menu Item</string>
+    <string name="menu_fourth_condensed">Fourth</string>
+    
+    <string name="menu_last">Final Menu Item</string>
+    <string name="menu_last_condensed">Last</string>
+    
+</resources>

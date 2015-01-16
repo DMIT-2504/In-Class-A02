@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:text="@string/send_data_title"
+        android:textSize="25sp"
+        android:textColor="@color/send_data_title_color"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        />
+    <EditText 
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:layout_marginTop="5sp"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:hint="@string/send_data_hint"
+        android:background="#CCFFFFFF"
+        android:id="@+id/textbox_data"
+        />
+    <Button 
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:text="@string/send_data_button_text"
+        android:textSize="15sp"
+        android:layout_marginLeft="5sp"
+        android:layout_marginTop="5sp"
+        android:layout_marginRight="5sp"
+        android:layout_marginBottom="5sp"
+        android:id="@+id/button_send_data"
+        />
+     <Button 
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:text="@string/start_receive_jitters"
+        android:textSize="15sp"
+        android:layout_marginLeft="5sp"
+        android:layout_marginTop="5sp"
+        android:layout_marginRight="5sp"
+        android:layout_marginBottom="5sp"
+        android:id="@+id/button_view_jitters"
+        />
+
+</LinearLayout>

@@ -10,9 +10,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class HelloWorldActivity extends Activity
-								implements OnClickListener {
-	private static final String TAG = "SendDataActivity";
-	
+                                implements OnClickListener {
+    private static final String TAG = "SendDataActivity";
+    
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -26,13 +26,13 @@ public class HelloWorldActivity extends Activity
     }
     
     public void onClick(View arg0) 
-	{
-		Log.d(TAG,"button clicked");
-		EditText text = (EditText)findViewById(R.id.text_view_data);
-		String data = text.getText().toString();
-		
-		Toast.makeText(this, "You entered: " + data, Toast.LENGTH_LONG).show();
-	}
+    {
+        Log.d(TAG,"button clicked");
+        EditText text = (EditText)findViewById(R.id.text_view_data);
+        String data = text.getText().toString();
+        
+        Toast.makeText(this, "You entered: " + data, Toast.LENGTH_LONG).show();
+    }
 }
 
 
