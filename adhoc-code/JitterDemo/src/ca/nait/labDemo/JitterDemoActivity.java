@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
+import org.apache.http.StatusLine;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
@@ -62,19 +63,15 @@ public class JitterDemoActivity extends Activity implements OnClickListener {
 
 	private boolean postToJitter(String data) {
 		try {
-			// Make my client object
-			HttpClient client = new DefaultHttpClient();
-			// Create a Post object (with form data that will be attached to the post)
-			HttpPost request = new HttpPost("http://www.youcode.ca/JitterServlet");
-			List <NameValuePair> postParameters = new ArrayList<NameValuePair>();
-			postParameters.add(new BasicNameValuePair("DATA", data));
-			postParameters.add(new BasicNameValuePair("LOGIN_NAME", "DanG"));
-			UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(postParameters);
-			request.setEntity(formEntity);
-			
-			// send the request and get the response
-			HttpResponse response = client.execute(request);
-			
+			JitterClient jc = new JitterClient();
+			StatusLine result = jc.postToJitter(data);
+			if(result.getStatusCode() != 200) {
+				Toast.makeText(this, 
+						       "Error posting to Jitter: " + 
+				               result.getReasonPhrase(),
+				               Toast.LENGTH_LONG);
+				return false;
+			}
 			return true;
 		} catch(Exception e) {
 			Toast.makeText(this, "Error: " + e.getMessage(), Toast.LENGTH_LONG);
