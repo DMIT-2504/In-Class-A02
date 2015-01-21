@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello" />
+
+    <EditText
+        android:id="@+id/editPersonResponsible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/edit_name_hint" >
+         <requestFocus />
+    </EditText>       
+
+    <EditText
+        android:id="@+id/editToDoItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_text_hint" />
+
+    <EditText
+        android:id="@+id/editDueDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:hint="@string/edit_date_hint" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_text" />
+
+    <ListView
+        android:id="@+id/todoList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#777"
+        android:dividerHeight="3dip"
+        android:background="#CCC" >
+    </ListView>
+
+</LinearLayout>

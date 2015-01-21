@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HelloCustomListView</string>
+    <string name="hello">Custom List</string>
+    <string name="edit_name_hint">Assigned to...</string>
+    <string name="edit_text_hint">Enter TODO Item</string>
+    <string name="edit_date_hint">Due by (DD-MM-YYYY)</string>
+    <string name="button_text">Add Item to List</string>
+
+</resources>
