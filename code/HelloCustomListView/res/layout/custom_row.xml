@@ -4,30 +4,30 @@
     android:layout_height="match_parent" >
     
     <TextView   android:id="@+id/sender" 
-			    android:textSize="12sp" 
-			    android:textStyle="bold" 
-			    android:textColor="#00FF00" 
-			    android:layout_alignParentLeft="true"
-			    android:layout_alignParentTop="true"
-			    android:layout_width="wrap_content" 
-			    android:layout_height="fill_parent"/>
+                android:textSize="12sp" 
+                android:textStyle="bold" 
+                android:textColor="#00FF00" 
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_width="wrap_content" 
+                android:layout_height="fill_parent"/>
     
     <TextView   android:id="@+id/date" 
-			    android:typeface="sans"
-			    android:textSize="12sp"
-			    android:textStyle="italic"
+                android:typeface="sans"
+                android:textSize="12sp"
+                android:textStyle="italic"
                 android:textColor="#0000FF" 
-			    android:layout_alignParentRight="true"
-			    android:layout_alignParentTop="true"
-			    android:layout_width="wrap_content" 
-			    android:layout_height="fill_parent"/>    
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_width="wrap_content" 
+                android:layout_height="fill_parent"/>    
     
     <TextView   android:id="@+id/text"
-			    android:textSize="14sp" 
-			    android:textStyle="bold" 
+                android:textSize="14sp" 
+                android:textStyle="bold" 
                 android:textColor="#FF0000" 
-			    android:layout_below="@id/sender"
-			    android:layout_width="wrap_content" 
-			    android:layout_height="fill_parent"/>
+                android:layout_below="@id/sender"
+                android:layout_width="wrap_content" 
+                android:layout_height="fill_parent"/>
     
 </RelativeLayout>
