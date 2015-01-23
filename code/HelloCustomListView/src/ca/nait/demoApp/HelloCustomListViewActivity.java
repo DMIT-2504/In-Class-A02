@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 public class HelloCustomListViewActivity extends Activity 
                                    implements OnClickListener {
+	// Fields to reference the controls and the data that I want to access/use in my Activity's methods
     private List<HashMap <String,String> > _todoItems = new ArrayList<HashMap <String,String> >();
     private Button _addButton;
     private EditText _taskInput;
@@ -35,14 +36,17 @@ public class HelloCustomListViewActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
+        // Get references to my controls on the form
         _addButton = (Button) findViewById(R.id.button1);
-        _addButton.setOnClickListener(this);
+        _addButton.setOnClickListener(this); // wire up the event handler for click events
 
         _taskInput = (EditText) findViewById(R.id.editToDoItem);
         _dueDateInput = (EditText) findViewById(R.id.editDueDate);
         _personNameInput = (EditText) findViewById(R.id.editPersonResponsible);
         _todoListView = (ListView) findViewById(R.id.todoList);
 
+        // Setting up the mapping that will be used by the adapter to associate data from the HashMap
+        // to the controls on the ListView's custom row structure.
         String[] fields = 
                 new String[]{ "sender","text", "date"};
         int [] ids = new int[]{R.id.sender,R.id.text,R.id.date};

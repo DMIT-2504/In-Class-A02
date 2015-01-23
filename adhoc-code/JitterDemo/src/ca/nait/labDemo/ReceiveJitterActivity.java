@@ -12,6 +12,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,12 +27,12 @@ public class ReceiveJitterActivity extends Activity {
 	}
 
 	private void getFromJitter() {
-		TextView textBox = (TextView)findViewById(R.id.textbox_receive_data);
+		ListView textBox = (ListView)findViewById(R.id.listview_receive_data);
 		try {
 			JitterClient jc = new JitterClient();
 			List<String> jitters = jc.getJitters();
 			for (String posting : jitters)
-				textBox.append(posting + NL);
+				; //textBox.append(posting + NL);
 		} catch(Exception e) {
 			Toast.makeText(this, "Error: " + e.getMessage(), Toast.LENGTH_LONG);
 		}

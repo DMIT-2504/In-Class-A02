@@ -12,14 +12,22 @@
         android:textColor="@color/receive_data_title_color"
         android:textSize="25sp" />
 
-    <TextView
-        android:id="@+id/textbox_receive_data"
-        android:layout_width="fill_parent"
+    <ListView 
+        android:id="@+id/listview_receive_data"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5sp"
-        android:layout_marginRight="5sp"
-        android:layout_marginTop="5sp"
-        android:background="#FFFFFF"
-        android:textColor="#900" />
+        android:divider="#777"
+        android:dividerHeight="3dip"
+        android:background="#CCC" ></ListView>
 
 </LinearLayout>
+
+
+
+
+
+
+
+
+
+
