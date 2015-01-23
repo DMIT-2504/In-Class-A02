@@ -26,6 +26,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class JitterClient {
+	public static final String KEY_POSTED_ON_DATE = "postedOnDate";
+	public static final String KEY_POSTED_TEXT = "postedText";
+	public static final String KEY_PERSON_NAME = "personName";
+
 	public List<HashMap<String, String>> getJitterDetails() 
 			throws IllegalStateException, URISyntaxException, IOException {
 		List<HashMap<String, String>> jitters = new ArrayList<HashMap<String, String>>();
@@ -47,9 +51,9 @@ public class JitterClient {
 			
 			// Make a hashmap and put the items in it
 			HashMap<String, String> data = new HashMap<String, String>();
-			data.put("personName", name);
-			data.put("postedText", post);
-			data.put("postedOnDate", date);
+			data.put(KEY_PERSON_NAME, name);
+			data.put(KEY_POSTED_TEXT, post);
+			data.put(KEY_POSTED_ON_DATE, date);
 			
 			// Add it to my list
 			jitters.add(data);

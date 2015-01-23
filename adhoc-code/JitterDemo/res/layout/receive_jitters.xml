@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:divider="#777"
         android:dividerHeight="3dip"
-        android:background="#CCC" ></ListView>
+        android:background="#333" ></ListView>
 
 </LinearLayout>
 
